@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota Max - Gestão Financeira da Moto</title>
+
+    <!-- *** CORREÇÃO: LINK DO MANIFEST MOVIDO PARA O LOCAL CORRETO DENTRO DE <head> *** -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importa o código React do App.jsx como módulo -->
+    <script type="module" src="./App.jsx"></script> 
+    <style>
+        /* Define a fonte Inter (usada pelo Tailwind) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111827; /* Fundo escuro */
+        }
+    </style>
+</head>
+<body>
+    <!-- Onde o React irá renderizar o componente App -->
+    <div id="root">
+        <!-- Loader inicial enquanto o script é carregado -->
+        <div class="min-h-screen flex flex-col items-center justify-center bg-gray-900">
+            <svg class="w-10 h-10 text-indigo-500 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p class="mt-4 text-gray-400 font-medium">Carregando Rota Max...</p>
+        </div>
+    </div>
+    
+    <!-- Incluir bibliotecas do Firebase (React e ReactDOM) -->
+    <script type="module">
+        import { createRoot } from 'https://cdn.skypack.dev/react-dom/client';
+        import React from 'https://cdn.skypack.dev/react';
+        
+        // Esta parte é necessária para carregar o App.jsx
+    </script>
+
+    <!-- Definição das variáveis globais (ATENÇÃO: VOCÊ DEVE PREENCHER AQUI) -->
+    <script>
+        // --- 🚨 AÇÕES NECESSÁRIAS AQUI 🚨 ---
+        // 1. Substitua 'SEU_APP_ID' pelo ID real do seu projeto Firebase (o mesmo ID que aparece na URL do console).
+        // 2. Substitua o objeto '{"apiKey": "..."}' pelas credenciais COMPLETAS do Firebase que você copiou do console.
+        window.__app_id = "SEU_APP_ID"; 
+        window.__firebase_config = '{"apiKey": "COLE_A_SUA_API_KEY_AQUI", "authDomain": "COLE_O_SEU_AUTH_DOMAIN_AQUI", "projectId": "COLE_O_SEU_PROJECT_ID_AQUI", "storageBucket": "COLE_O_SEU_STORAGE_BUCKET_AQUI", "messagingSenderId": "COLE_O_SEU_MESSAGING_SENDER_ID_AQUI", "appId": "COLE_O_SEU_APP_ID_AQUI"}';
+        // Para fins de publicação, não usaremos o token de autenticação inicial
+        window.__initial_auth_token = null; 
+    </script>
+</body>
+</html>
